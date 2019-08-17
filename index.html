@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Token Exchange</title>
+  </head>
+  <body>
+    <h1>Send Tokens to your coworkers!</h1>
+    <div class="main_content">
+      <label for="name">Name :</label>
+      <form name="user_dropdown">
+        <select name="name" id="name">
+          <option value="choose">Choose...</option>
+          <option value="ABO">ABO</option>
+          <option value="FMI">FMI</option>
+          <option value="PLE">PLE</option>
+          <option value="TAS">TAS</option>
+          <option value="VIL">VIL</option>
+        </select>
+      </form>
+    </div>
+    <img id="qr_code" src="">
+    <div class="ether_address_area">
+      <p id="ether_address"></p>
+      <button type="button" name="copy_button" id="copy_button" data-clipboard-target="#ether_address">Copy</button>
+    </div>
+    <div id="popup_area">
+      <div id="popup">Address copied!
+        <img id="close_img" src="assets/close.png">
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script>
+      var btn = document.getElementById('copy_button');
+      var clipboard = new ClipboardJS(btn);
+    </script>
+  </body>
+</html>

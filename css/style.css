@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 275px;
+  margin: auto auto 1em auto;
+}
+
+label {
+  font-size: 2rem;
+}
+
+select {
+  height: 30px;
+  width: 150px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+#qr_code {
+  width: 30%;
+  margin: 0 auto 0.5em auto;
+  display: none;
+}
+
+.ether_address_area {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ether_address {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+#ether_address::selection {
+  background-color: transparent;
+}
+
+#ether_address::-moz-selection {
+  background-color: transparent;
+}
+
+#copy_button {
+  width: 130px;
+  height: 30px;
+  background-color: #0F7FB6;
+  color: white;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  border: none;
+  margin: 1em auto 0 auto;
+}
+
+#copy_button:hover {
+  background-color: #00B0CC;
+  cursor: pointer;
+}
+
+#copy_button:focus {
+  outline: none;
+}
+
+#popup_area {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+}
+
+#popup {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: auto;
+  padding: 0 0.2em 0 0.2em;
+  background-color: #61BB78;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+#close_img {
+  display: block;
+  width: 7%;
+}
+
+#close_img:hover {
+  cursor: pointer;
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #qr_code {
+    width: 40%;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #qr_code {
+    width: 60%;
+  }
+
+  #ether_address {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+  h1 {
+    font-size: 4.3rem;
+  }
+
+  .main_content {
+    width: 420px;
+  }
+
+  label {
+    font-size: 3rem;
+  }
+
+  select {
+    font-size: 2.4rem;
+    height: 60px;
+    width: 230px;
+    border-radius: 7px;
+    padding-left: 0.3em;
+  }
+
+  #qr_code {
+    width: 80%;
+  }
+
+  #ether_address {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  #copy_button {
+    width: 200px;
+    height: 70px;
+    font-size: 2.2rem;
+    border-radius: 50px;
+  }
+
+  #popup {
+    width: 340px;
+    height: 80px;
+    font-size: 2rem;
+    padding: 0 0.2em 0 0.2em;
+  }
+
+}
