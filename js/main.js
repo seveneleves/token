@@ -23,10 +23,9 @@ nameList.addEventListener('change', function(e) {
   }
 })
 
-copyButton.addEventListener('click', function() {
-  copyPopup.style.display = "flex";
-})
-
-closeButton.addEventListener('click', function() {
-  copyPopup.style.display = "none";
+document.getElementById('copy_button').addEventListener('click', function() {
+  document.querySelector('.div_to_animate').classList.add('animation');
+  setTimeout(function() {
+      document.querySelector('.div_to_animate').classList.remove('animation');
+    }, 2000);
 })
